@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vaccine-availability-tracker/static/css/main.953cd679.chunk.css",
-    "main.js": "/vaccine-availability-tracker/static/js/main.992dbfd3.chunk.js",
-    "main.js.map": "/vaccine-availability-tracker/static/js/main.992dbfd3.chunk.js.map",
+    "main.js": "/vaccine-availability-tracker/static/js/main.92cf735e.chunk.js",
+    "main.js.map": "/vaccine-availability-tracker/static/js/main.92cf735e.chunk.js.map",
     "runtime-main.js": "/vaccine-availability-tracker/static/js/runtime-main.a91b3e1e.js",
     "runtime-main.js.map": "/vaccine-availability-tracker/static/js/runtime-main.a91b3e1e.js.map",
     "static/js/2.19b06020.chunk.js": "/vaccine-availability-tracker/static/js/2.19b06020.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a91b3e1e.js",
     "static/js/2.19b06020.chunk.js",
     "static/css/main.953cd679.chunk.css",
-    "static/js/main.992dbfd3.chunk.js"
+    "static/js/main.92cf735e.chunk.js"
   ]
 }
