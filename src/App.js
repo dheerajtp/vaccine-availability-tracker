@@ -1,19 +1,26 @@
 import "./App.css";
+import React, {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Nav from "./components/Nav";
 import Form from "./components/Form";
-
+import DistrictForm from "./components/District/DistrictForm";
 function App() {
   return (
     <div className="container-fluid">
-      <div className="row">
-        <div className="col-12 p-3 h3">
-          <b>
-            <header className="text-primary">
-              Vaccine Availability Tracker
-            </header>
-          </b>
-        </div>
-        <Form />
-      </div>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={Form}></Route>
+          <Route
+            path="/search-by-district"
+            exact
+            component={DistrictForm}
+          ></Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
