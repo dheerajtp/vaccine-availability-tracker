@@ -7,10 +7,12 @@ const Form = () => {
   const [date, setDate] = useState();
   const [submittedPin, setSubmittedPin] = useState(673016);
   const [submittedDate, setSubmittedDate] = useState();
+  let currentdate = new Date();
+  currentdate = currentdate.toLocaleDateString();
 
   const getDetails = async () => {
     const response = await fetch(
-      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${submittedPin}&date=${submittedDate}`
+      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${submittedPin}&date=${currentdate}`
     );
     const data = await response.json();
     setVaccinceDetails(data.sessions);
@@ -37,9 +39,14 @@ const Form = () => {
       <div className="row">
         <form className="mx-auto" onSubmit={getSearch}>
           <div className="row">
-            <div className="col">
-              <label for="inputingpincode" className="form-label text-primary">
-                Enter Pincode | പിൻകോഡ് ടൈപ്പ് ചെയ്യുക
+            <div className="col-12">
+              <label
+                htmlFor="inputingpincode"
+                className="form-label text-primary"
+              >
+                Enter Pincode | പിൻകോഡ് ടൈപ്പ് ചെയ്യുക [ ഈ ദിവസത്തെ ലഭ്യമായ
+                വാക്‌സിൻ ഡീറ്റെയിൽസ് മാത്രമേ ഇപ്പോൾ ലഭ്യം ആക്കാൻ
+                സാധിക്കുന്നുള്ളൂ ]
               </label>
               <input
                 type="number"
@@ -53,7 +60,8 @@ const Form = () => {
               />
             </div>
             <div className="col">
-              <label for="inputingdate" className="form-label text-primary">
+              {/*
+                <label htmlFor="inputingdate" className="form-label text-primary">
                 Enter Date | തീയതി സെലക്ട് ചെയ്യുക
               </label>
               <input
@@ -64,6 +72,7 @@ const Form = () => {
                 id="inputingdate"
                 required
               />
+                */}
             </div>
           </div>
           <div className="row pt-3">

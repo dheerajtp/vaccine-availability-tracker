@@ -4,13 +4,15 @@ import ShowDistrictDetails from "./ShowDistrictDetails";
 const DistrictForm = () => {
   const [vaccinedetails, setVaccinceDetails] = useState([]);
   const [district, setDistrict] = useState(301);
-  const [date, setDate] = useState("");
+  //const [date, setDate] = useState("");
   const [submittedDistrict, setSubmittedDistrict] = useState(301);
-  const [submittedDate, setSubmittedDate] = useState();
+  let currentdate = new Date();
+  currentdate = currentdate.toLocaleDateString();
+  const [submittedDate, setSubmittedDate] = useState(currentdate);
 
   const getDetails = async () => {
     const response = await fetch(
-      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${submittedDistrict}&date=${submittedDate}`
+      `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByDistrict?district_id=${submittedDistrict}&date=${currentdate}`
     );
     const data = await response.json();
     setVaccinceDetails(data.sessions);
@@ -21,15 +23,18 @@ const DistrictForm = () => {
   }, [submittedDistrict, submittedDate]);
   const getDistrict = (e) => {
     setDistrict(e.target.value);
-    console.log(district);
   };
-  const dateHandler = (e) => {
-    setDate(e.target.value);
-  };
+  {
+    /*const dateHandler = (e) => {
+    let nd = e.target.value;
+    let m = nd.toLocaleDateString();
+    console.log(m);
+  }; */
+  }
   const getSearch = (e) => {
     e.preventDefault();
     setSubmittedDistrict(district);
-    setSubmittedDate(date);
+    // setSubmittedDate(date);
   };
 
   return (
@@ -38,12 +43,14 @@ const DistrictForm = () => {
         <form className="mx-auto" onSubmit={getSearch}>
           <div className="row">
             <div className="d-flex flex-row bd-highlight mb-3 gap-3">
-              <div className="col-6">
+              <div className="col-12">
                 <label
-                  for="inputingpincode"
+                  htmlFor="inputingpincode"
                   className="form-label text-primary pb-2"
                 >
-                  Select District | ജില്ല തിരഞ്ഞെടുക്കുക
+                  Select District | ജില്ല തിരഞ്ഞെടുക്കുക [ ഈ ദിവസത്തെ ലഭ്യമായ
+                  വാക്‌സിൻ ഡീറ്റെയിൽസ് മാത്രമേ ഇപ്പോൾ ലഭ്യം ആക്കാൻ
+                  സാധിക്കുന്നുള്ളൂ ]
                 </label>
                 <select
                   className="form-select text-primary"
@@ -96,9 +103,9 @@ const DistrictForm = () => {
                   </option>
                 </select>
               </div>
-              <div classNameName="col-6">
+              {/*<div classNameName="col-6">
                 <label
-                  for="inputingdate"
+                  htmlFor="inputingdate"
                   className="form-label text-primary pb-2"
                 >
                   Enter Date | തീയതി സെലക്ട് ചെയ്യുക
@@ -107,11 +114,12 @@ const DistrictForm = () => {
                   value={date}
                   onChange={dateHandler}
                   type="date"
+                  placeholder="dd-mm-yyyy"
                   className="form-control text-primary"
                   id="inputingdate"
                   required
                 />
-              </div>
+  </div>*/}
             </div>
           </div>
           <div className="row pt-3">
@@ -137,6 +145,7 @@ const DistrictForm = () => {
             dose2={vaccine.available_capacity_dose2}
             age={vaccine.min_age_limit}
             vaccine={vaccine.vaccine}
+            date={vaccine.date}
           />
         ))}
       </div>

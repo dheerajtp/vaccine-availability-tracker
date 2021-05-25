@@ -12,11 +12,15 @@ const ShowDistrictDetails = ({
   vaccine,
   block,
   pin,
+  date,
 }) => {
   return (
     <div className="p-3">
       <div className="card mx-auto shadow p-3 mb-5 rounded">
         <div className="card-body">
+          <u className="text-primary">
+            <h3 class="card-title text-primary text-center">{date}</h3>
+          </u>
           <h4 class="card-title text-primary">{name}</h4>
           <h5 class="card-subtitle mb-2 text-primary">{address}</h5>
           <br></br>
