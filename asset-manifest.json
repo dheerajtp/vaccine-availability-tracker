@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/vaccine-availability-tracker/static/css/main.953cd679.chunk.css",
-    "main.js": "/vaccine-availability-tracker/static/js/main.92cf735e.chunk.js",
-    "main.js.map": "/vaccine-availability-tracker/static/js/main.92cf735e.chunk.js.map",
+    "main.js": "/vaccine-availability-tracker/static/js/main.dc4d7062.chunk.js",
+    "main.js.map": "/vaccine-availability-tracker/static/js/main.dc4d7062.chunk.js.map",
     "runtime-main.js": "/vaccine-availability-tracker/static/js/runtime-main.a91b3e1e.js",
     "runtime-main.js.map": "/vaccine-availability-tracker/static/js/runtime-main.a91b3e1e.js.map",
-    "static/js/2.19b06020.chunk.js": "/vaccine-availability-tracker/static/js/2.19b06020.chunk.js",
-    "static/js/2.19b06020.chunk.js.map": "/vaccine-availability-tracker/static/js/2.19b06020.chunk.js.map",
+    "static/js/2.d175c920.chunk.js": "/vaccine-availability-tracker/static/js/2.d175c920.chunk.js",
+    "static/js/2.d175c920.chunk.js.map": "/vaccine-availability-tracker/static/js/2.d175c920.chunk.js.map",
     "static/js/3.bdf22956.chunk.js": "/vaccine-availability-tracker/static/js/3.bdf22956.chunk.js",
     "static/js/3.bdf22956.chunk.js.map": "/vaccine-availability-tracker/static/js/3.bdf22956.chunk.js.map",
     "index.html": "/vaccine-availability-tracker/index.html",
     "static/css/main.953cd679.chunk.css.map": "/vaccine-availability-tracker/static/css/main.953cd679.chunk.css.map",
-    "static/js/2.19b06020.chunk.js.LICENSE.txt": "/vaccine-availability-tracker/static/js/2.19b06020.chunk.js.LICENSE.txt"
+    "static/js/2.d175c920.chunk.js.LICENSE.txt": "/vaccine-availability-tracker/static/js/2.d175c920.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.a91b3e1e.js",
-    "static/js/2.19b06020.chunk.js",
+    "static/js/2.d175c920.chunk.js",
     "static/css/main.953cd679.chunk.css",
-    "static/js/main.92cf735e.chunk.js"
+    "static/js/main.dc4d7062.chunk.js"
   ]
 }
